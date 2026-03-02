@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Education Point | Naini Prayagraj</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+    --primary:#1e3a8a;
+    --accent:#f59e0b;
+    --light:#ffffff;
+    --gray:#f5f7fb;
+    --dark:#111827;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:var(--light);
+    color:var(--dark);
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+/* NAVBAR */
+header{
+    background:#fff;
+    position:fixed;
+    width:100%;
+    top:0;
+    z-index:1000;
+    box-shadow:0 2px 10px rgba(0,0,0,0.05);
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 0;
+}
+
+.logo{
+    font-size:22px;
+    font-weight:700;
+    color:var(--primary);
+}
+
+.logo span{
+    color:var(--accent);
+}
+
+.nav-links{
+    list-style:none;
+    display:flex;
+    gap:25px;
+}
+
+.nav-links li{
+    position:relative;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#333;
+    font-weight:500;
+    transition:0.3s;
+}
+
+.nav-links a:hover{
+    color:var(--primary);
+}
+
+/* DROPDOWN */
+.dropdown-content{
+    display:none;
+    position:absolute;
+    top:30px;
+    background:#fff;
+    box-shadow:0 5px 20px rgba(0,0,0,0.1);
+    border-radius:6px;
+    padding:10px 0;
+}
+
+.dropdown-content a{
+    display:block;
+    padding:8px 20px;
+}
+
+.dropdown:hover .dropdown-content{
+    display:block;
+}
+
+/* HERO */
+.hero{
+    margin-top:80px;
+    height:90vh;
+    background:linear-gradient(rgba(30,58,138,0.7),rgba(30,58,138,0.7)),
+    url('https://images.unsplash.com/photo-1588072432836-e10032774350') center/cover;
+    display:flex;
+    align-items:center;
+    color:#fff;
+    text-align:center;
+}
+
+.hero-content{
+    width:100%;
+}
+
+.hero h1{
+    font-size:45px;
+    margin-bottom:15px;
+}
+
+section{padding:80px 0;}
+.section-title{text-align:center;margin-bottom:50px;}
+.section-title h2{font-size:34px;color:var(--primary);}
+
+/* SUCCESS STORIES */
+.success-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.success-card{
+    background:var(--gray);
+    padding:30px;
+    text-align:center;
+    border-radius:10px;
+}
+.success-logo{
+    background:var(--gray);
+    padding:110px;
+    text-align:center;
+    border-radius:20px;
+}
+
+.success-card img{
+    width:80px;
+    height:80px;
+    border-radius:50%;
+    object-fit:cover;
+    margin-bottom:15px;
+}
+
+.success-card h3{
+    font-size:32px;
+    color:var(--accent);
+}
+
+/* WHY CHOOSE US */
+.why-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+    text-align:center;
+}
+
+.why-card{
+    padding:25px;
+    border-radius:10px;
+    background:#fff;
+    box-shadow:0 5px 20px rgba(0,0,0,0.05);
+}
+
+.why-card i{
+    font-size:35px;
+    color:var(--accent);
+    margin-bottom:15px;
+}
+
+/* VISIT US */
+.visit-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+}
+
+.map-box img{
+    width:100%;
+    aspect-ratio:1/1;
+    object-fit:cover;
+    border-radius:10px;
+}
+.hero p{
+    font-size:18px;
+    margin-bottom:25px;
+}
+
+.btn{
+    padding:12px 25px;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+    font-weight:500;
+    transition:0.3s;
+}
+
+.btn-primary{
+    background:var(--accent);
+    color:#fff;
+}
+
+.btn-primary:hover{
+    background:#d97706;
+}
+
+.btn-outline{
+    background:#fff;
+    color:var(--primary);
+    margin-left:10px;
+}
+
+/* SECTION */
+section{
+    padding:70px 0;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.section-title h2{
+    font-size:32px;
+    color:var(--primary);
+}
+
+/* COURSES */
+.courses-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.course-card{
+    background:var(--gray);
+    padding:25px;
+    border-radius:10px;
+    text-align:center;
+    transition:0.3s;
+}
+
+.course-card:hover{
+    transform:translateY(-8px);
+}
+
+.course-card h3{
+    margin-bottom:10px;
+    color:var(--primary);
+}
+
+/* TESTIMONIAL */
+.testimonial{
+    text-align:center;
+    max-width:700px;
+    margin:auto;
+}
+
+.testimonial p{
+    font-style:italic;
+}
+
+/* FAQ */
+.faq-item{
+    margin-bottom:15px;
+    border-bottom:1px solid #ddd;
+    padding-bottom:10px;
+}
+
+.faq-question{
+    cursor:pointer;
+    font-weight:600;
+    color:var(--primary);
+}
+
+.faq-answer{
+    display:none;
+    padding-top:5px;
+}
+
+/* CONTACT */
+.contact-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+}
+
+input,textarea{
+    width:100%;
+    padding:10px;
+    margin-bottom:10px;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
+
+footer{
+    background:#0f172a;
+    color:#fff;
+    padding:60px 0 30px;
+}
+
+.footer-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+    margin-bottom:40px;
+}
+
+.footer-grid h4{
+    margin-bottom:15px;
+    color:var(--accent);
+}
+
+.footer-grid p, .footer-grid li{
+    font-size:14px;
+    margin-bottom:8px;
+}
+
+.footer-bottom{
+    text-align:center;
+    border-top:1px solid rgba(255,255,255,0.2);
+    padding-top:15px;
+    font-size:14px;
+}
+.container{width:90%;max-width:1200px;margin:auto;}
+
+
+/* WHATSAPP */
+.whatsapp{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#25d366;
+    color:#fff;
+    padding:12px 15px;
+    border-radius:50%;
+    font-size:20px;
+    text-decoration:none;
+}
+
+/* MODAL */
+.modal{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.6);
+    justify-content:center;
+    align-items:center;
+}
+
+.modal-content{
+    background:#fff;
+    padding:30px;
+    border-radius:8px;
+    width:90%;
+    max-width:400px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="container">
+<nav>
+<div class="logo">Education <span>Point</span></div>
+<ul class="nav-links">
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li class="dropdown">
+<a href="#">Courses</a>
+<div class="dropdown-content">
+<a href="#">Class 6-8</a>
+<a href="#">Class 9-10</a>
+<a href="#">Class 11-12 PCM</a>
+<a href="#">Class 11-12 PCB</a>
+</div>
+</li>
+<li><a href="#contact">Contact</a></li>
+<li><button class="btn btn-primary" onclick="openModal()">Enroll Now</button></li>
+</ul>
+</nav>
+</div>
+</header>
+
+<section class="hero" id="home">
+    
+<div class="hero-content">
+<h1>Best Coaching in Naini Prayagraj</h1>
+<p>Affordable Quality Education with Personal Attention</p>
+<p>Preparing students for Board Exams, JEE & NEET</p>
+<button class="btn btn-primary" onclick="openModal()">Admission Open 2025-26</button>
+<button class="btn btn-outline" onclick="window.location.href='tel:8707242287'">Call Now</button>
+</div>
+</section>
+<br>
+<div style="width: 100%; display: flex; justify-content: center;">
+<img src="https://github.com/TAUFIQALAM/EducationPointCoaching/blob/main/download%20(3).png?raw=true" style="width: 55%;">
+</div>
+<section id="about">
+<div class="container">
+<div class="section-title">
+<h2>About Us</h2>
+</div>
+<p style="text-align:center;max-width:800px;margin:auto;">
+Education Point located at ADA Colony, Naini, Prayagraj provides quality coaching for Class 6th to 12th (PCM & PCB). With 4.7 rating and 100+ reviews, we focus on concept clarity, smart board teaching, study materials, regular tests and personal attention.
+</p>
+</div>
+</section>
+
+<section id="courses">
+<div class="container">
+<div class="section-title">
+<h2>Our Courses</h2>
+</div>
+<div class="courses-grid">
+<div class="course-card">
+<h3>Class 6 - 8</h3>
+<p>Strong foundation building</p>
+</div>
+<div class="course-card">
+<h3>Class 9 - 10</h3>
+<p>Board exam preparation</p>
+</div>
+<div class="course-card">
+<h3>Class 11 - 12 PCM</h3>
+<p>Physics, Chemistry, Maths</p>
+</div>
+<div class="course-card">
+<h3>Class 11 - 12 PCB</h3>
+<p>Physics, Chemistry, Biology</p>
+</div>
+</div>
+</div>
+</section>
+
+<section id="testimonials">
+<div class="container">
+<div class="section-title">
+<h2>Student Reviews</h2>
+</div>
+<div class="testimonial">
+<p id="reviewText">"Best coaching classes in Naini Prayagraj. Special faculty of chemistry is 5 star."</p>
+</div>
+</div>
+</section>
+<section id="success">
+<div class="container">
+<div class="section-title">
+<h2>Student Success Stories</h2>
+<p>Preparing students for board exams and competitive exams like JEE and NEET</p>
+</div>
+
+<div class="success-grid">
+<div class="success-card">
+<img src="https://github.com/TAUFIQALAM/EducationPointCoaching/blob/main/download%20(1).jpg?raw=true">
+<h3>95%+</h3>
+<p>Students passing board exams with distinction</p>
+</div>
+
+<div class="success-card">
+<img src="https://github.com/TAUFIQALAM/EducationPointCoaching/blob/main/download%20(3).jpg?raw=true">
+<h3>50+</h3>
+<p>JEE selections and IIT admissions</p>
+</div>
+
+<div class="success-card">
+<img src="https://randomuser.me/api/portraits/men/44.jpg">
+<h3>100+</h3>
+<p>NEET selections and medical college admissions</p>
+</div>
+
+
+<div class="success-card">
+<img src="https://github.com/TAUFIQALAM/EducationPointCoaching/blob/main/download%20(2).jpg?raw=true">
+<h3>5000+</h3>
+<p>24/7 Library support and with study material</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section id="why">
+<div class="container">
+<div class="section-title">
+<h2>Why Choose Us?</h2>
+</div>
+
+<div class="why-grid">
+<div class="why-card"><i class="fas fa-user-graduate"></i><h4>Experienced & Dedicated Faculty</h4></div>
+<div class="why-card"><i class="fas fa-chart-line"></i><h4>Proven Track Record</h4></div>
+<div class="why-card"><i class="fas fa-rupee-sign"></i><h4>Affordable Fees</h4></div>
+<div class="why-card"><i class="fas fa-chalkboard-teacher"></i><h4>Modern Teaching Methods</h4></div>
+<div class="why-card"><i class="fas fa-heart"></i><h4>Personal Attention</h4></div>
+<div class="why-card"><i class="fas fa-heart"></i><h4>Parking Available</h4></div>
+
+</div>
+</div>
+</section>
+
+<!-- VISIT US -->
+<section id="visit">
+<div class="container">
+<div class="section-title">
+<h2>Visit Us</h2>
+</div>
+
+<div class="visit-grid">
+<div>
+<h4>Location</h4>
+<p>Naini, Prayagraj</p>
+
+<h4>Phone</h4>
+<p>+91-8765432100<br>+91-9876543210</p>
+
+<h4>Email</h4>
+<p>info@educationpoint.com</p>
+
+<h4>Office Hours</h4>
+<p>Monday - Saturday: 9:00 AM - 6:00 PM<br>Sunday: Closed</p>
+</div>
+
+<div class="map-box">
+<img src="https://github.com/TAUFIQALAM/EducationPointCoaching/blob/main/Screenshot%202026-03-02%20225445.png?raw=true" alt="Map">
+</div>
+</div>
+</div>
+</section>
+
+<section id="faq">
+<div class="container">
+<div class="section-title">
+<h2>Frequently Asked Questions</h2>
+</div>
+
+<div class="faq-item">
+<div class="faq-question">Do you provide study material?</div>
+<div class="faq-answer">Yes, comprehensive study material is provided.</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-question">Do you take regular tests?</div>
+<div class="faq-answer">Yes, weekly tests and surprise tests are conducted.</div>
+</div>
+
+</div>
+</section>
+
+<section id="contact">
+<div class="container">
+<div class="section-title">
+<h2>Contact Us</h2>
+</div>
+<div class="contact-grid">
+<div>
+<p><strong>Address:</strong><br>A-3/55, ADA Colony, Naini, Prayagraj</p>
+<p><strong>Phone:</strong> 8707242287</p>
+<p><strong>Timing:</strong> 9 AM - 9 PM</p>
+</div>
+<div>
+<form onsubmit="submitForm(event)">
+<input type="text" placeholder="Your Name" required>
+<input type="email" placeholder="Your Email" required>
+<textarea placeholder="Your Message" required></textarea>
+<button class="btn btn-primary">Send Message</button>
+</form>
+</div>
+</div>
+</div>
+</section>
+
+<footer>
+<div class="container">
+<div class="footer-grid">
+
+<div>
+<h4>About Education Point</h4>
+<p>Education Point is a competitive and academic coaching institute located in Naini, Prayagraj, offering classes for students from Class 6 to 12 with a strong focus on PCM and PCB streams.</p>
+</div>
+
+<div>
+<h4>Courses</h4>
+<p>Class 6-8 Foundation</p>
+<p>Class 9-10 Board Focus</p>
+<p>Class 11-12 PCM</p>
+<p>Class 11-12 PCB</p>
+<p>JEE Preparation</p>
+<p>NEET Preparation</p>
+</div>
+
+<div>
+<h4>Contact</h4>
+<p>Location: Naini, Prayagraj</p>
+<p>Email: info@educationpoint.com</p>
+<p>Phone: +91-8765432100</p>
+<p>Hours: Mon-Sat: 9AM-6PM</p>
+</div>
+
+</div>
+
+<div class="footer-bottom">
+Education Point – Disciplined learning, personal attention and structured coaching for Class 6 to 12.<br><br>
+© 2026 Education Point. All rights reserved.
+</div>
+</div>
+</footer>
+
+<a href="https://wa.me/918707242287" class="whatsapp">💬</a>
+
+<!-- MODAL -->
+<div class="modal" id="admissionModal">
+<div class="modal-content">
+<h3>Admission Form</h3>
+<input type="text" placeholder="Student Name">
+<input type="text" placeholder="Class">
+<input type="tel" placeholder="Parent Phone">
+<button class="btn btn-primary" onclick="closeModal()">Submit</button>
+</div>
+</div>
+
+<script>
+
+/* =========================
+   SMOOTH SCROLL NAVIGATION
+========================= */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const headerOffset = 90; // adjust if header height changes
+
+    function scrollToSection(targetId) {
+        const section = document.querySelector(targetId);
+        if (section) {
+            const elementPosition = section.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: "smooth"
+            });
+        }
+    }
+
+    // Attach click event to all internal nav links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute("href");
+            scrollToSection(targetId);
+        });
+    });
+
+});
+
+
+/* =========================
+   MODAL FUNCTIONALITY
+========================= */
+
+function openModal(){
+    document.getElementById("admissionModal").style.display="flex";
+}
+
+function closeModal(){
+    document.getElementById("admissionModal").style.display="none";
+}
+
+// Close modal when clicking outside content
+window.addEventListener("click", function(e){
+    const modal = document.getElementById("admissionModal");
+    if(e.target === modal){
+        closeModal();
+    }
+});
+
+// Close modal on ESC key
+document.addEventListener("keydown", function(e){
+    if(e.key === "Escape"){
+        closeModal();
+    }
+});
+
+
+/* =========================
+   FAQ TOGGLE
+========================= */
+
+const faqs=document.querySelectorAll(".faq-question");
+faqs.forEach(q=>{
+    q.addEventListener("click",()=>{
+        const ans=q.nextElementSibling;
+
+        // Close other answers
+        document.querySelectorAll(".faq-answer").forEach(a=>{
+            if(a !== ans){
+                a.style.display="none";
+            }
+        });
+
+        ans.style.display = ans.style.display === "block" ? "none" : "block";
+    });
+});
+
+
+/* =========================
+   CONTACT FORM
+========================= */
+
+function submitForm(e){
+    e.preventDefault();
+
+    const name = e.target.querySelector('input[type="text"]').value.trim();
+    const email = e.target.querySelector('input[type="email"]').value.trim();
+    const message = e.target.querySelector('textarea').value.trim();
+
+    if(!name || !email || !message){
+        alert("Please fill all fields properly.");
+        return;
+    }
+
+    alert("Thank you! We will contact you soon.");
+    e.target.reset();
+}
+
+
+/* =========================
+   REVIEW SLIDER
+========================= */
+
+const reviews=[
+    '"Best coaching classes in Naini Prayagraj."',
+    '"Loved the way teachers teach us."',
+    '"Excellent teachers and nurturing environment."'
+];
+
+let index=0;
+
+setInterval(()=>{
+    index=(index+1)%reviews.length;
+    const reviewElement = document.getElementById("reviewText");
+    if(reviewElement){
+        reviewElement.innerText=reviews[index];
+    }
+},4000);
+
+
+/* =========================
+   SUCCESS COUNTER ANIMATION
+========================= */
+
+function animateCounter(el, target){
+    let count = 0;
+    const speed = 20;
+    const increment = target / 100;
+
+    const updateCount = () => {
+        count += increment;
+        if(count < target){
+            el.innerText = Math.floor(count) + "+";
+            setTimeout(updateCount, speed);
+        } else {
+            el.innerText = target + "+";
+        }
+    };
+    updateCount();
+}
+
+// Trigger counter when visible
+window.addEventListener("scroll", function(){
+    const successSection = document.getElementById("success");
+    if(!successSection) return;
+
+    const sectionTop = successSection.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
+
+    if(sectionTop < windowHeight - 100){
+        document.querySelectorAll(".success-card h3").forEach(el=>{
+            const value = parseInt(el.innerText);
+            if(!el.classList.contains("counted")){
+                el.classList.add("counted");
+                animateCounter(el, value);
+            }
+        });
+    }
+});
+
+</script>
+
+</body>
+</html>
