@@ -373,6 +373,126 @@ footer{
     width:90%;
     max-width:400px;
 }
+/* =========================
+   ONE TO ONE COACHING
+========================= */
+
+.one-to-one{
+    background:var(--gray);
+}
+
+.one-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+    align-items:center;
+}
+
+.one-grid img{
+    width:100%;
+    border-radius:10px;
+}
+
+.one-content h3{
+    color:var(--primary);
+    margin-bottom:15px;
+}
+
+.fade-in{
+    opacity:0;
+    transform:translateY(40px);
+    transition:all 0.8s ease;
+}
+
+.fade-in.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* =========================
+   EXPLORE COURSES
+========================= */
+
+.explore-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.explore-card{
+    background:var(--gray);
+    padding:25px;
+    border-radius:10px;
+    text-align:center;
+    transition:0.3s;
+}
+
+.explore-card:hover{
+    transform:translateY(-8px);
+}
+
+/* =========================
+   KIDS SECTION
+========================= */
+
+.kids-section{
+    background:linear-gradient(rgba(30,58,138,0.9),rgba(30,58,138,0.9)),
+    url('https://images.unsplash.com/photo-1584697964403-c75d6f8f20e5') center/cover;
+    color:#fff;
+    text-align:center;
+}
+
+.kids-section h2{
+    color:#fff;
+}
+
+/* =========================
+   TEACHERS SECTION
+========================= */
+
+.teacher-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+    text-align:center;
+}
+
+.teacher-card{
+    background:var(--gray);
+    padding:20px;
+    border-radius:10px;
+}
+
+.teacher-card img{
+    width:100px;
+    height:100px;
+    border-radius:50%;
+    object-fit:cover;
+    margin-bottom:10px;
+}
+
+/* =========================
+   INSPIRING STORIES
+========================= */
+
+.story-section{
+    background:var(--gray);
+}
+
+.story-card{
+    background:#fff;
+    padding:25px;
+    border-radius:10px;
+    margin-bottom:20px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.05);
+}
+
+/* Responsive */
+@media(max-width:768px){
+    .one-grid{
+        grid-template-columns:1fr;
+    }
+}
 </style>
 </head>
 
@@ -546,7 +666,120 @@ Education Point located at ADA Colony, Naini, Prayagraj provides quality coachin
 </div>
 </div>
 </section>
+<section class="one-to-one">
+<div class="container">
+<div class="section-title">
+<h2>Personalised One-to-One Coaching</h2>
+</div>
 
+<div class="one-grid fade-in">
+<div>
+<img src="https://images.unsplash.com/photo-1606326608606-aa0b62935f2b">
+</div>
+<div class="one-content">
+<h3>Focused Attention for Better Results</h3>
+<p>We provide dedicated one-to-one mentoring for students who require extra attention. Personalized doubt solving, targeted improvement plans, and performance tracking ensure measurable academic growth.</p>
+<button class="btn btn-primary" onclick="openModal()">Book Personal Session</button>
+</div>
+</div>
+</div>
+</section>
+<section class="kids-section">
+<div class="container">
+<div class="section-title">
+<h2>Courses for Kids – Book Your Free Demo</h2>
+</div>
+
+<p>Interactive learning, smart classes and fun-based concept clarity for young learners.</p>
+<br>
+<button class="btn btn-primary" onclick="openModal()">Book Free Demo Class</button>
+</div>
+</section>
+<section>
+<div class="container">
+<div class="section-title">
+<h2>Learn from Expert Teachers</h2>
+</div>
+
+<div class="teacher-grid fade-in">
+
+<div class="teacher-card">
+<img src="https://randomuser.me/api/portraits/men/32.jpg">
+<h4>Chemistry Expert</h4>
+<p>10+ Years Experience</p>
+</div>
+
+<div class="teacher-card">
+<img src="https://randomuser.me/api/portraits/women/44.jpg">
+<h4>Mathematics Mentor</h4>
+<p>Board & JEE Specialist</p>
+</div>
+
+<div class="teacher-card">
+<img src="https://randomuser.me/api/portraits/men/50.jpg">
+<h4>Physics Faculty</h4>
+<p>Concept Based Teaching</p>
+</div>
+
+<div class="teacher-card">
+<img src="https://randomuser.me/api/portraits/women/65.jpg">
+<h4>Biology Faculty</h4>
+<p>NEET Preparation Expert</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<section class="story-section">
+<div class="container">
+<div class="section-title">
+<h2>Inspiring Stories. Inspiring Results.</h2>
+</div>
+
+<div class="story-card fade-in">
+<p>"I improved from 62% to 91% in board exams. The personal attention and regular tests made all the difference."</p>
+<strong>- Student, Class 10</strong>
+</div>
+
+<div class="story-card fade-in">
+<p>"Cleared NEET in first attempt with structured guidance and constant mentoring."</p>
+<strong>- Medical Aspirant</strong>
+</div>
+
+</div>
+</section>
+
+
+<section>
+<div class="container">
+<div class="section-title">
+<h2>Explore Our Courses</h2>
+</div>
+
+<div class="explore-grid fade-in">
+<div class="explore-card">
+<h3>Foundation Program</h3>
+<p>Strong basics for Classes 6–8.</p>
+</div>
+
+<div class="explore-card">
+<h3>Board Excellence</h3>
+<p>Focused Class 9–10 preparation.</p>
+</div>
+
+<div class="explore-card">
+<h3>JEE Target Batch</h3>
+<p>Advanced PCM training for IIT aspirants.</p>
+</div>
+
+<div class="explore-card">
+<h3>NEET Achievers</h3>
+<p>PCB focused preparation for medical entrance.</p>
+</div>
+</div>
+</div>
+</section>
 <section id="faq">
 <div class="container">
 <div class="section-title">
@@ -803,8 +1036,29 @@ window.addEventListener("scroll", function(){
         });
     }
 });
+/* =========================
+   FADE-IN SCROLL ANIMATION
+========================= */
 
+const faders = document.querySelectorAll('.fade-in');
+
+const appearOptions = {
+    threshold: 0.2
+};
+
+const appearOnScroll = new IntersectionObserver(function(entries, observer){
+    entries.forEach(entry=>{
+        if(!entry.isIntersecting) return;
+        entry.target.classList.add('show');
+        observer.unobserve(entry.target);
+    });
+}, appearOptions);
+
+faders.forEach(fader=>{
+    appearOnScroll.observe(fader);
+});
 </script>
 
 </body>
 </html>
+
