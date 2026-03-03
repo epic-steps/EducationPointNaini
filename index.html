@@ -7,7 +7,7 @@
 
 <!-- Google Font -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <style>
 :root{
     --primary:#1e3a8a;
@@ -15,6 +15,13 @@
     --light:#ffffff;
     --gray:#f5f7fb;
     --dark:#111827;
+}
+:root{
+    --primary:#031D44;
+    --accent:#5EB1BF;
+    --light:#ffffff;
+    --gray:#E7E7E7;
+    --dark:#000000;
 }
 
 *{
@@ -257,6 +264,26 @@ section{
 
 .course-card:hover{
     transform:translateY(-8px);
+}
+/* =========================
+   SOCIAL MEDIA LINKS
+========================= */
+
+.social-links{
+    margin-top:15px;
+}
+
+.social-links a{
+    display:inline-block;
+    margin-right:10px;
+    font-size:20px;
+    color:var(--accent);
+    transition:0.3s;
+}
+
+.social-links a:hover{
+    color:#fff;
+    transform:translateY(-3px);
 }
 
 .course-card h3{
@@ -508,10 +535,15 @@ footer{
 <li class="dropdown">
 <a href="#">Courses</a>
 <div class="dropdown-content">
-<a href="#">Class 6-8</a>
-<a href="#">Class 9-10</a>
-<a href="#">Class 11-12 PCM</a>
-<a href="#">Class 11-12 PCB</a>
+<a href="#">Class 6</a>
+<a href="#">Class 7</a>
+<a href="#">Class 8</a>
+<a href="#">Class 9</a>
+<a href="#">Class 10</a>
+<a href="#">Class 11 PCM</a>
+<a href="#">Class 11 PCB</a>
+<a href="#">Class 12 PCM</a>
+<a href="#">Class 12 PCB</a>
 </div>
 </li>
 <li><a href="#contact">Contact</a></li>
@@ -524,11 +556,22 @@ footer{
 <section class="hero" id="home">
     
 <div class="hero-content">
-<h1>Best Coaching in Naini Prayagraj</h1>
+<h1>BEST COACHING IN NAINI PRAYAGRAJ</h1>
 <p>Affordable Quality Education with Personal Attention</p>
-<p>Preparing students for Board Exams, JEE & NEET</p>
+<h10>Preparing students for Board Exams, JEE & NEET</h10>
+<div class="social-links" style="margin-top:20px;">
+    <a href="https://www.youtube.com/@ChemicalLOCHArajneeshpandey" target="_blank">
+        <i class="fab fa-youtube"></i>
+    </a>
+
+    <a href="https://www.instagram.com/educationpointadanaini" target="_blank">
+        <i class="fab fa-instagram"></i>
+    </a>
+</div>
+<br>
 <button class="btn btn-primary" onclick="openModal()">Admission Open 2025-26</button>
 <button class="btn btn-outline" onclick="window.location.href='tel:8707242287'">Call Now</button>
+
 </div>
 </section>
 <br>
@@ -619,53 +662,6 @@ Education Point located at ADA Colony, Naini, Prayagraj provides quality coachin
 </div>
 </section>
 
-<!-- WHY CHOOSE US -->
-<section id="why">
-<div class="container">
-<div class="section-title">
-<h2>Why Choose Us?</h2>
-</div>
-
-<div class="why-grid">
-<div class="why-card"><i class="fas fa-user-graduate"></i><h4>Experienced & Dedicated Faculty</h4></div>
-<div class="why-card"><i class="fas fa-chart-line"></i><h4>Proven Track Record</h4></div>
-<div class="why-card"><i class="fas fa-rupee-sign"></i><h4>Affordable Fees</h4></div>
-<div class="why-card"><i class="fas fa-chalkboard-teacher"></i><h4>Modern Teaching Methods</h4></div>
-<div class="why-card"><i class="fas fa-heart"></i><h4>Personal Attention</h4></div>
-<div class="why-card"><i class="fas fa-heart"></i><h4>Parking Available</h4></div>
-
-</div>
-</div>
-</section>
-
-<!-- VISIT US -->
-<section id="visit">
-<div class="container">
-<div class="section-title">
-<h2>Visit Us</h2>
-</div>
-
-<div class="visit-grid">
-<div>
-<h4>Location</h4>
-<p>Naini, Prayagraj</p>
-
-<h4>Phone</h4>
-<p>+91-8765432100<br>+91-9876543210</p>
-
-<h4>Email</h4>
-<p>info@educationpoint.com</p>
-
-<h4>Office Hours</h4>
-<p>Monday - Saturday: 9:00 AM - 6:00 PM<br>Sunday: Closed</p>
-</div>
-
-<div class="map-box">
-<img src="https://github.com/TAUFIQALAM/EducationPointCoaching/blob/main/Screenshot%202026-03-02%20225445.png?raw=true" alt="Map">
-</div>
-</div>
-</div>
-</section>
 <section class="one-to-one">
 <div class="container">
 <div class="section-title">
@@ -678,7 +674,7 @@ Education Point located at ADA Colony, Naini, Prayagraj provides quality coachin
 </div>
 <div class="one-content">
 <h3>Focused Attention for Better Results</h3>
-<p>We provide dedicated one-to-one mentoring for students who require extra attention. Personalized doubt solving, targeted improvement plans, and performance tracking ensure measurable academic growth.</p>
+<p>We provide dedicated one-to-one mentoring for students who require extra attention. Personalized doubt solving, targeted improvement plans, and performance tracking ensure measurable academic growth.</p><br>
 <button class="btn btn-primary" onclick="openModal()">Book Personal Session</button>
 </div>
 </div>
@@ -704,27 +700,37 @@ Education Point located at ADA Colony, Naini, Prayagraj provides quality coachin
 <div class="teacher-grid fade-in">
 
 <div class="teacher-card">
-<img src="https://randomuser.me/api/portraits/men/32.jpg">
+<img src="https://randomuser.me/api/portraits/women/63.jpg">
 <h4>Chemistry Expert</h4>
 <p>10+ Years Experience</p>
 </div>
 
 <div class="teacher-card">
-<img src="https://randomuser.me/api/portraits/women/44.jpg">
+<img src="https://randomuser.me/api/portraits/women/27.jpg">
 <h4>Mathematics Mentor</h4>
 <p>Board & JEE Specialist</p>
 </div>
 
 <div class="teacher-card">
-<img src="https://randomuser.me/api/portraits/men/50.jpg">
+<img src="https://randomuser.me/api/portraits/men/26.jpg">
 <h4>Physics Faculty</h4>
 <p>Concept Based Teaching</p>
 </div>
 
 <div class="teacher-card">
-<img src="https://randomuser.me/api/portraits/women/65.jpg">
+<img src="https://randomuser.me/api/portraits/women/35.jpg">
 <h4>Biology Faculty</h4>
 <p>NEET Preparation Expert</p>
+</div>
+<div class="teacher-card">
+<img src="https://randomuser.me/api/portraits/women/95.jpg">
+<h4>6-9 Faculty</h4>
+<p>Junior Class Expert</p>
+</div>
+<div class="teacher-card">
+<img src="https://randomuser.me/api/portraits/women/85.jpg">
+<h4>Personal Guide</h4>
+<p>Specialized Tutor</p>
 </div>
 
 </div>
@@ -746,7 +752,30 @@ Education Point located at ADA Colony, Naini, Prayagraj provides quality coachin
 <p>"Cleared NEET in first attempt with structured guidance and constant mentoring."</p>
 <strong>- Medical Aspirant</strong>
 </div>
+<div class="story-card fade-in">
+<p>"Scored 96% in Class 12 boards after joining Education Point. The structured revision plan helped me stay consistent."</p>
+<strong>- Student, Class 12 PCM</strong>
+</div>
 
+<div class="story-card fade-in">
+<p>"Cracked JEE Main with confidence because of regular mock tests and concept clarity sessions."</p>
+<strong>- Engineering Aspirant</strong>
+</div>
+
+<div class="story-card fade-in">
+<p>"Earlier I was weak in Mathematics, but now it has become my strongest subject."</p>
+<strong>- Student, Class 9</strong>
+</div>
+
+<div class="story-card fade-in">
+<p>"The one-to-one doubt sessions helped me clear my basics and improve my ranking significantly."</p>
+<strong>- NEET Aspirant</strong>
+</div>
+
+<div class="story-card fade-in">
+<p>"Very disciplined environment with motivating teachers who genuinely care about students' success."</p>
+<strong>- Parent of Class 8 Student</strong>
+</div>
 </div>
 </section>
 
@@ -799,6 +828,53 @@ Education Point located at ADA Colony, Naini, Prayagraj provides quality coachin
 </div>
 </section>
 
+<!-- WHY CHOOSE US -->
+<section id="why">
+<div class="container">
+<div class="section-title">
+<h2>Why Choose Us?</h2>
+</div>
+
+<div class="why-grid">
+<div class="why-card"><i class="fas fa-user-graduate"></i><h4>Experienced & Dedicated Faculty</h4></div>
+<div class="why-card"><i class="fas fa-chart-line"></i><h4>Proven Track Record</h4></div>
+<div class="why-card"><i class="fas fa-rupee-sign"></i><h4>Affordable Fees</h4></div>
+<div class="why-card"><i class="fas fa-chalkboard-teacher"></i><h4>Modern Teaching Methods</h4></div>
+<div class="why-card"><i class="fas fa-heart"></i><h4>Personal Attention</h4></div>
+<div class="why-card"><i class="fas fa-heart"></i><h4>Parking Available</h4></div>
+
+</div>
+</div>
+</section>
+
+<!-- VISIT US -->
+<section id="visit">
+<div class="container">
+<div class="section-title">
+<h2>Visit Us</h2>
+</div>
+
+<div class="visit-grid">
+<div>
+<h4>Location</h4>
+<p>Naini, Prayagraj</p>
+
+<h4>Phone</h4>
+<p>+91-8765432100<br>+91-9876543210</p>
+
+<h4>Email</h4>
+<p>info@educationpoint.com</p>
+
+<h4>Office Hours</h4>
+<p>Monday - Saturday: 9:00 AM - 6:00 PM<br>Sunday: Closed</p>
+</div>
+
+<div class="map-box">
+<img src="https://github.com/TAUFIQALAM/EducationPointCoaching/blob/main/Screenshot%202026-03-02%20225445.png?raw=true" alt="Map">
+</div>
+</div>
+</div>
+</section>
 <section id="contact">
 <div class="container">
 <div class="section-title">
@@ -850,7 +926,15 @@ Education Point located at ADA Colony, Naini, Prayagraj provides quality coachin
 </div>
 
 </div>
+<div class="social-links">
+    <a href="https://www.youtube.com/@ChemicalLOCHArajneeshpandey" target="_blank">
+        <i class="fab fa-youtube"></i>
+    </a>
 
+    <a href="https://www.instagram.com/educationpointadanaini" target="_blank">
+        <i class="fab fa-instagram"></i>
+    </a>
+</div>
 <div class="footer-bottom">
 Education Point – Disciplined learning, personal attention and structured coaching for Class 6 to 12.<br><br>
 © 2026 Education Point. All rights reserved.
@@ -981,9 +1065,20 @@ function submitForm(e){
 ========================= */
 
 const reviews=[
-    '"Best coaching classes in Naini Prayagraj."',
-    '"Loved the way teachers teach us."',
-    '"Excellent teachers and nurturing environment."'
+'"Best coaching classes in Naini Prayagraj."',
+'"Loved the way teachers teach us."',
+'"Excellent teachers and nurturing environment."',
+
+'"Very disciplined environment and regular test system helps a lot."',
+'"My child improved from average to top performer within one year."',
+'"Teachers explain concepts in very simple and practical way."',
+'"Best institute for JEE and NEET preparation in Naini area."',
+'"Personal attention given to every student is outstanding."',
+'"Affordable fees with high quality teaching standards."',
+'"Doubt clearing sessions are very helpful and effective."',
+'"Highly recommended for board exam preparation."',
+'"Friendly teachers and supportive management team."',
+'"Strong focus on concept clarity and regular practice papers."'
 ];
 
 let index=0;
@@ -994,7 +1089,7 @@ setInterval(()=>{
     if(reviewElement){
         reviewElement.innerText=reviews[index];
     }
-},4000);
+},1000);
 
 
 /* =========================
